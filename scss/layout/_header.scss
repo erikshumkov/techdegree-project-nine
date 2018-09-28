@@ -1,0 +1,23 @@
+header {
+  height: 100px;
+  width: 100%;
+  margin-top: 0;
+  padding: 0;
+  background: #7477bf;
+  h1 {
+    margin-top: 0;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  span {
+    font-weight: lighter;
+    color: #fff;
+  }
+}
+
+.container--header {
+  display: flex;
+  justify-content: space-between;
+}

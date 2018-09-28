@@ -1,0 +1,38 @@
+/*===========================================
+// Import partials
+//==========================================*/
+
+@import 'utilities/index',
+        'base/index',
+        'layout/index',
+        'components/index';
+
+
+// Styles SCSS
+.inner-addon {
+  position: relative;
+  border: 1px solid grey;
+  border-radius: 3px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* style icon */
+.inner-addon .fa-search {
+  position: absolute;
+  padding: 5px 10px 5px 0px;
+  pointer-events: none;
+}
+
+/* align icon */
+.right-addon .fa-search {
+  right: 0px;
+}
+
+/* add padding  */
+.left-addon input  {
+  padding-left:  30px;
+}
+.right-addon input {
+  padding-right: 30px;
+}

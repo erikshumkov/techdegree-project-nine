@@ -1,0 +1,19 @@
+/* Charts styling */
+
+.container {
+  &--area {
+    border-bottom: 1px solid grey;
+  }
+  &--user {
+    margin-left: 20px;
+  }
+}
+
+.container--traffic h2,
+.container--daily h2,
+.container--mobile h2 {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: lighter;
+  margin-left: 10px;
+}
