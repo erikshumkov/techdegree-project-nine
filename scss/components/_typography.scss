@@ -2,3 +2,22 @@
 .user--name {
   display: none;
 }
+
+.twitter--stats,
+.facebook--stats,
+.google--stats {
+  h3 {
+    margin: 10px 0 0 0;
+    color: rgb(135,138,199);
+  }
+  span {
+    margin: 0 0 10px 0;
+    font-size: 40px;
+    font-weight: lighter;
+  }
+}
+
+h4 {
+  margin: 0 0 0 15px;
+  text-transform: uppercase;
+}

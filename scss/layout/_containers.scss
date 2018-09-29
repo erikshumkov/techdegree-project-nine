@@ -17,3 +17,94 @@
   font-weight: lighter;
   margin-left: 10px;
 }
+
+.twitter--image,
+.facebook--image,
+.google--image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  background: rgb(115,119,191);
+  border-radius: 50%;
+  margin: auto 15px auto 15px;
+}
+
+.twitter--svg {
+  width: 36px;
+  height: 29px;
+  background: #1da1f2;
+}
+
+.facebook--svg {
+  width: 36px;
+  height: 36px;
+  background: #3b5998;
+}
+
+.google--svg {
+  width: 30px;
+  height: 30px;
+  background: rgb(228,73,51);
+}
+
+.container--twitter,
+.container--facebook,
+.container--google {
+  display: flex;
+  flex-direction: row;
+  background: rgb(46,48,47);
+  border-radius: 5px;
+  margin: 0 10px 10px 10px;
+}
+
+.twitter--stats,
+.facebook--stats,
+.google--stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.member {
+  &--1,
+  &--2,
+  &--3 {
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    flex-direction: row;
+    margin: 0 10px 0 10px;
+    p:first-of-type {
+      font-size: inherit;
+      margin: 15px 0 0 0;
+    }
+    p {
+      font-size: 13px;
+      margin: 0;
+    }
+    p:last-of-type {
+      margin-bottom: 15px;
+    }
+  }
+  &--4 {
+    display: flex;
+    flex-direction: row;
+    margin: 0 10px 0 10px;
+    p:first-of-type {
+      font-size: inherit;
+      margin: 15px 0 0 0;
+    }
+    p {
+      font-size: 13px;
+      margin: 0;
+    }
+    p:last-of-type {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.message--user {
+  display: flex;
+  flex-direction: column;
+}

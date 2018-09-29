@@ -3,8 +3,72 @@ fieldset {
 }
 
 #searchbar {
+  background: rgb(46,48,47);
   border: none;
   padding: 5px 0 5px 10px;
   font-size: 12px;
   outline: 0;
+}
+
+#search2,
+#message,
+select {
+  background: rgb(46,48,47);
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  color: grey;
+  font-size: 14px;
+  margin: 5px 0;
+  outline: 0;
+  padding: 8px;
+  resize: none;
+}
+
+#message {
+  height: 80px;
+}
+
+#submit {
+  background: rgb(46,48,47);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 5px 0;
+  outline: 0;
+  padding: 12px;
+  text-transform: uppercase;
+  &:active {
+
+    // gör att knapp blir intryckt
+    // på klick
+
+  }
+}
+
+select {
+  background: rgb(46,48,47);
+  color: grey;
+  width: 100%;
+}
+
+#save, #cancel {
+  background: rgb(46,48,47);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 20px 0;
+  outline: 0;
+  padding: 12px;
+  text-transform: uppercase;
+  width: 30%;
+  &:active {
+
+    // gör att knapp blir intryckt
+    // på klick
+
+  }
 }
