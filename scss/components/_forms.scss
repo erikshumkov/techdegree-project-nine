@@ -1,74 +1,175 @@
+.mail {
+  @extend %mail;
+}
+
+legend {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 0 10px 3px;
+  font-size: 14px;
+}
+
 fieldset {
   border: none;
+  padding: 0;
+  @include medq("medium") {
+    @include flexify($dir: column, $just: center);
+    width: 40%;
+  }
 }
 
 #searchbar {
-  background: rgb(46,48,47);
-  border: none;
+  @include formfields;
+  margin: 2px 0;
   padding: 5px 0 5px 10px;
   font-size: 12px;
-  outline: 0;
 }
 
-#search2,
+#searchuser,
 #message,
 select {
-  background: rgb(46,48,47);
-  border: 1px solid lightgrey;
+  @include formfields($border: $primary-border);
   border-radius: 3px;
-  color: grey;
   font-size: 14px;
   margin: 5px 0;
-  outline: 0;
   padding: 8px;
   resize: none;
 }
 
+#searchuser {
+  margin-bottom: 10px;
+  width: 99%;
+  @include medq("medium") {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
 #message {
   height: 80px;
+  margin-bottom: 14px;
+  width: 93%;
+  @include medq("medium") {
+    height: 103px;
+    width: inherit;
+  }
+  @include medq("large") {
+  }
 }
 
 #submit {
-  background: rgb(46,48,47);
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 12px;
-  font-weight: bold;
-  margin: 5px 0;
-  outline: 0;
-  padding: 12px;
-  text-transform: uppercase;
-  &:active {
-
-    // gör att knapp blir intryckt
-    // på klick
-
+  @include primarybutton;
+  background: $project-purple;
+  margin: 5px 2px;
+  @include medq("medium") {
+    margin: 5.5px 0 5px 0;
   }
 }
 
 select {
-  background: rgb(46,48,47);
-  color: grey;
-  width: 100%;
+  background: $input-fields;
+  color: $grey;
+  width: 98%;
+  margin-left: 2px;
+  @include medq("medium") {
+    margin: 20px auto 0 auto;
+  }
+  @include medq("large") {
+    margin: 28px 7px 0 auto;
+  }
 }
 
 #save, #cancel {
-  background: rgb(46,48,47);
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 12px;
-  font-weight: bold;
+  @include primarybutton;
+  background: $input-fields;
   margin: 20px 0;
-  outline: 0;
-  padding: 12px;
-  text-transform: uppercase;
-  width: 30%;
-  &:active {
-
-    // gör att knapp blir intryckt
-    // på klick
-
+  width: 45%;
+  @include medq("medium") {
+    width: 50%;
   }
+}
+
+#save {
+  background: $project-purple;
+  margin-right: 20px;
+}
+#cancel {
+  margin-right: 7px;
+}
+
+// Autocomplete styling
+// From https://www.w3schools.com/howto/howto_js_autocomplete.asp
+.autofill {
+  position: relative;
+  display: inline-block;
+}
+
+.autofill-items {
+  position: absolute;
+  margin-top: -10px;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autofill-items div {
+  padding: 10px;
+  cursor: pointer;
+  background: $black;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autofill-items div:hover {
+  /*hovering an item in autocomplete:*/
+  background: $almost-black;
+}
+.autofill-active {
+  /*using the up and down arrow keys in autocomplete:*/
+  background: $project-purple !important;
+  color: $white;
+}
+// Autocomplete End.
+
+// Search icon inside first input field.
+.inner-addon {
+  background: $input-fields;
+  border: $primary-border;
+  border-radius: 3px;
+  margin: 3px auto;
+  padding: 4px 0;
+  position: relative;
+}
+
+/* style search icon */
+.inner-addon .fa-search {
+  position: absolute;
+  padding: 5px 10px 5px 0px;
+  pointer-events: none;
+}
+
+/* align search icon */
+.right-addon .fa-search {
+  right: 0px;
+  color: $project-purple;
+}
+
+.right-addon input {
+  padding-right: 30px;
+}
+
+// Internet Explorer / Edge style fix
+// Search icon was not in line.
+_:-ms-lang(x), .inner-addon .fa-search {
+  padding: 10px 10px 0px 0px
+}
+
+_:-ms-lang(x), .inner-addon {
+  padding: 0;
+}
+
+// Settings container, fixed margin.
+_:-ms-lang(x), .settings--p {
+  margin-top: 4px;
 }

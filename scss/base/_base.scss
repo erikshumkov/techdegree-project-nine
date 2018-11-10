@@ -1,4 +1,12 @@
 body {
-  background: black;
-  color: grey;
+  background: $background-body;
+  color: $grey;
+  font-family: $font-stack-primary;
+}
+
+main {
+  margin-bottom: 70px;
+  @include medq("large") {
+    @include flexify($dir: row);
+  }
 }

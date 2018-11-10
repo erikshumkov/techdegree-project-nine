@@ -1,59 +1,56 @@
 .bell {
-  width: 25px;
-  height: 25px;
-  margin-right: 20px;
-  order: 3;
+  @extend %bell-styling;
+  & .number {
+    @extend %notification-number;
+  }
 }
 
 .profile {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  order: 1;
+  @extend %profile-picture;
 }
 
-.icon--news,
-.icon--userstats,
-.icon--charts,
-.icon--settings {
-  height: 25px;
-  width: 25px;
-  margin: 5px 5px;
+// Notification Box Photos
+.note-photo-1, .note-photo-2, .note-photo-3 {
+  @extend %notification-pictures;
+}
+
+// Times Icon
+.alert {
+  .fa, .fas {
+    @extend %times-styling;
+  }
 }
 
 .member__photo {
   &--1, &--2, &--3, &--4 {
-    align-self: center;
-    border-radius: 50%;
-    height: 30px;
-    margin: 0 10px 0 5px;
-    width: 30px;
+    @extend %member-photo;
   }
 }
 
-.member__photo {
-  &--1 {
-    border: 3px solid rgb(108,202,165);
-  }
-  &--2 {
-    border: 3px solid rgb(255,247,94);
-  }
-  &--3 {
-    border: 2px solid rgb(228,73,51);
-  }
-  &--4 {
-    border: 3px solid #1da1f2;
-  }
-}
-
-.twitter--image {
-  background: #1da1f2;
-}
-
-.facebook--image {
-  background: #3b5998;
-}
-
+.twitter--image,
+.facebook--image,
 .google--image {
-  background: rgb(228,73,51);
+  @extend %social-circle;
+}
+
+.twitter--svg {
+  @extend %twitter;
+}
+
+.facebook--svg {
+  @extend %facebook;
+}
+
+.google--svg {
+  @extend %google;
+}
+
+// Arrow Icon
+.fa-angle-right {
+  color: $project-purple;
+  font-size: 30px;
+}
+
+.arrow:last-of-type {
+  margin-left: auto;
 }

@@ -1,0 +1,136 @@
+// Images
+%bell-styling {
+  width: 25px;
+  height: 25px;
+  order: 0;
+  &:hover {
+    cursor: pointer;
+  }
+  @include medq("medium") {
+    order: 1;
+  }
+}
+
+%notification-number {
+  font-size: 14px;
+  padding-right: 1px;
+  position: absolute;
+  margin-top: -38px;
+  margin-left: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $notification-number;
+  color: $white;
+  line-height: 20px;
+  font-family: $font-stack-primary;
+  text-align: center;
+
+  // Firefox, IE fix. Number badge went out of line.
+  right: 50px;
+  top: 55px;
+  @include medq("medium") {
+    right: 198px;
+    top: 68px;
+  }
+}
+
+%profile-picture {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  order: 1;
+}
+
+%notification-pictures {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  margin-right: 15px;
+  line-height: 24px;
+  text-align: center;
+}
+
+%times-styling {
+  padding: 1.5px 4px 0 0;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+%member-photo {
+  align-self: center;
+  border-radius: 50%;
+  height: 30px;
+  margin: 0 10px 0 5px;
+  width: 30px;
+  border: 3px solid $project-purple;
+}
+
+
+
+%social-circle {
+  @include flexify($just: center, $align: center);
+  height: 60px;
+  width: 60px;
+  background: $project-purple;
+  border-radius: 50%;
+  margin: auto 15px auto 15px;
+}
+
+%twitter {
+  width: 36px;
+  height: 29px;
+  background: $project-purple;
+}
+
+%facebook {
+  width: 36px;
+  height: 36px;
+  background: $project-purple;
+}
+
+%google {
+  width: 30px;
+  height: 30px;
+  background: $project-purple;
+}
+
+// Navigation links
+%icon-navigation {
+  height: 25px;
+  width: 25px;
+  padding: 10px 25px;
+  &:hover svg path,
+  &:hover {
+    cursor: pointer;
+    fill: #fff;
+    border-bottom: $navigation-border;
+    padding-bottom: 8px;
+    @include medq("large") {
+      border-bottom: none;
+      padding: 10px 25px 10px 23px;
+      border-left: $navigation-border;
+    }
+  }
+  @include medq("large") {
+    margin-bottom: 20px;
+  }
+}
+
+%icon-news {
+  padding: 10px 25px 8px 25px;
+  border-bottom: $navigation-border;
+  @include medq("large") {
+    margin-top: 20px;
+    padding: 10px 25px 10px 23px;
+    border-bottom: none;
+    border-left: $navigation-border;
+  }
+}
+
+// Email adresses
+%mail {
+  color: $project-purple;
+  text-decoration: none;
+}

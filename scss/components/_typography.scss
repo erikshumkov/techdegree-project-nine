@@ -1,6 +1,13 @@
 
 .user--name {
   display: none;
+  color: $white;
+  font-size: 13px;
+  @include medq("medium") {
+    display: block;
+    order: 2;
+    margin-left: 12px;
+  }
 }
 
 .twitter--stats,
@@ -8,7 +15,7 @@
 .google--stats {
   h3 {
     margin: 10px 0 0 0;
-    color: rgb(135,138,199);
+    color: $project-purple;
   }
   span {
     margin: 0 0 10px 0;
@@ -18,6 +25,45 @@
 }
 
 h4 {
-  margin: 0 0 0 15px;
   text-transform: uppercase;
+  margin-left: 0;
+  font-family: $font-stack-primary;
+  font-size: 14px;
+  @include medq("medium") {
+    margin: 0 0 5px 15px;
+  }
+}
+
+.container--charts + h4 {
+  margin-left: 5px;
+  @include medq("large") {
+    margin: 20px 0 20px 20px;
+  }
+}
+
+.settings > h4 {
+  margin-left: 5px;
+}
+
+.close {
+  border: 1px solid white;
+  font-weight: bold;
+  padding: 0px 10px 0px 10px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.error-alert {
+  color: $error-alert;
+  @include medq("medium") {
+    margin-bottom: -35px;
+  }
+}
+
+.success-alert {
+  color: $success-alert;
+  @include medq("medium") {
+    margin-bottom: -20px;
+  }
 }

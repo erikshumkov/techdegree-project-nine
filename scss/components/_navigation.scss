@@ -1,8 +1,121 @@
 /* sidebar nav */
-
 .navigation--sidebar {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background: #232730;
+  @include flexify($dir: row, $just: space-around, $align: center);
+  background: $navigation-menu;
+  height: 50px;
+  overflow: hidden;
+  z-index: 1000000;
+  @include medq("large") {
+    @include flexify($dir: column, $just: start);
+    height: 100%;
+  }
 }
+
+.icon--news,
+.icon--userstats,
+.icon--charts,
+.icon--settings {
+  @extend %icon-navigation;
+}
+
+.icon--news {
+  @extend %icon-news;
+}
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  @include medq("large") {
+    width: 75px;
+  }
+}
+
+.stick-nav + main {
+  padding-top: 60px;
+}
+
+// Notifications box styling
+.box {
+  z-index: 1000;
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include medq("medium") {
+    left: 53%;
+  }
+  @include medq("large") {
+    left: 65%;
+  }
+}
+.notifications {
+  width: 250px;
+  height: 60px;
+  text-align: left;
+  padding: 0 15px;
+  background: $project-purple;
+  transform: translateY(-100%);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,.2);
+  @include medq("medium") {
+    width: 300px;
+  }
+}
+
+.note-header {
+  @include flexify($just: space-between, $dir: row, $align: center);
+  padding-top: 13px;
+}
+
+.exit-box {
+  padding: 10px 15px 10px 15px;
+  &:hover {
+    cursor: pointer;
+    background-color: $project-purple-darker;
+  }
+}
+
+.exit-box .fa-times {
+  color: $white;
+  font-size: 18px;
+}
+
+.notifications .num {
+  color: $white;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 24px;
+}
+
+ul {
+  position: absolute;
+  left: 0;
+  top: 60px;
+  margin: 0;
+  width: 100%;
+  background: $white;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  padding: 5px 10px 15px 10px;
+  box-sizing: border-box;
+  display: block;
+}
+
+ul li {
+  list-style: none;
+  border-bottom: $secondary-border;
+  padding: 8px 0;
+  @include flexify();
+}
+ul li:last-child {
+  border-bottom: none;
+}
+ul li .text {
+  position: relative;
+  font-family: sans-serif;
+  color: $black;
+  top: 3px;
+  cursor: pointer;
+}
+// Notifications end

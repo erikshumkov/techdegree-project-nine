@@ -1,0 +1,36 @@
+/*===========================================
+// Variables
+//==========================================*/
+
+// Colors
+$black: #000;
+$grey: grey;
+$white: #fff;
+$almost-black: #303030;
+$background-body: $black;
+$header: #30343f;
+$project-purple: #7377bf;
+$project-purple-darker: #6064a2;
+$input-fields: #2e302f;
+$error-alert: red;
+$success-alert: lightgreen;
+$notification-number: #ff2c74;
+$navigation-menu: #232730;
+$icon: #ccc;
+
+// Media Query Breakpoints
+$mq-xs    : 1px;
+$mq-s     : 425px;
+$mq-m     : 768px;
+$mq-l     : 1024px;
+$mq-xl    : 1100px;
+
+// Font Stacks, Font Family
+$font-stack-primary: 'Niramit', sans-serif;
+$font-stack-title-bold: 'Cabin', sans-serif;
+$font-stack-title-thin: 'Raleway', sans-serif;
+
+// Border
+$primary-border: 1px solid $grey;
+$secondary-border: 1px solid rgba(0,0,0,.2);
+$navigation-border: 2px solid lightgreen;
