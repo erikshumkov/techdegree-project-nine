@@ -33,15 +33,6 @@ function stickyNav() {
   }
 }
 
-// function newSize() {
-//   if(window.innerWidth < 1024) {
-//     mainContent.style.paddingLeft = "0px";
-//     }
-// }
-//
-// window.onresize = () => newSize();
-
-
 // Open / Close Notification box
 const bell = document.querySelector('.bell');
 const exitNote = document.querySelector('.exit-box');

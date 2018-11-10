@@ -556,6 +556,7 @@ header {
       padding: 5px 50px 20px 0; } }
   @media (min-width: 1024px) {
     .container--mobile {
+      padding-top: 10px;
       border-bottom: none;
       border-top: none;
       height: auto; } }
@@ -650,7 +651,7 @@ header {
     margin: 18px auto; } }
 @media (min-width: 1024px) {
   #firstChart {
-    width: 94% !important;
+    width: 96% !important;
     height: 342px !important;
     margin: 0 auto; } }
 @media (min-width: 1100px) {

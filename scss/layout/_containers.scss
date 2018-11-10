@@ -64,6 +64,7 @@
     padding: 5px 50px 20px 0;
     }
     @include medq("large") {
+      padding-top: 10px;
       border-bottom: none;
       border-top: none;
       height: auto;
@@ -168,7 +169,7 @@
     margin: 18px auto;
   }
   @include medq("large") {
-    width: 94% !important;
+    width: 96% !important;
     height: 342px !important;
     margin: 0 auto;
   }
@@ -494,7 +495,7 @@
   @include medq("large") {
     padding-left: 7px;
     width: 49%;
-  } 
+  }
   h4 {
     @include medq("medium") {
       margin: 20px 0 5px 0;
