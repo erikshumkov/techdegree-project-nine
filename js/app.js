@@ -1,9 +1,6 @@
 // Application ****************** //
 // ****************************** //
 
-
-// Scriptfel i IE. Fixa.
-
 // Sticky navbar from https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
 // When the page get scrolled, use the stickyNav function.
 window.onscroll = () => stickyNav();
@@ -65,7 +62,6 @@ times.addEventListener('click', () => {
 });
 
 // Send button, use JS to submit the form and display a success message.
-
 let counter = 0;
 const searchUser = document.querySelector("#searchuser");
 const textArea = document.querySelector("#message");
@@ -77,7 +73,7 @@ submit.addEventListener('click', (e) => {
   // Keep track of number of missed form fields with counter.
   counter = 0;
 
-  // If no name or no message is entered
+  // If no name or no message is entered make the input borders go red.
   if (searchUser.value === "") {
     counter++;
     searchUser.style.borderColor = "red";
@@ -85,13 +81,14 @@ submit.addEventListener('click', (e) => {
     searchUser.style.borderColor = "lightgrey";
   }
 
-  if (textArea.value === "") {
+  if ( textArea.value === "" ) {
     counter++;
     textArea.style.borderColor = "red";
   } else {
     textArea.style.borderColor = "lightgrey";
   }
 
+  // If the user name or a message is missing in the form, display an error message under the form.
    if( searchUser.value === "" ||
    			 textArea.value === "" ) {
 
@@ -115,7 +112,6 @@ submit.addEventListener('click', (e) => {
   }
 
 });
-
 
 // Members array for autocomplete functionality.
 const users = [
@@ -231,6 +227,8 @@ autocomplete(searchUser, users);
 // Autocomplete end.
 
 // Use local storage to save settings
+const settings = document.querySelector('.settings');
+let savedP = document.createElement("p");
 let onoffOne = document.querySelector('.switch-one input');
 let onoffTwo = document.querySelector('.switch-two input');
 let timezone = document.querySelector('.settings select');
@@ -242,6 +240,9 @@ function saveSettings() {
   localStorage.setItem('onoffOne', JSON.stringify(onoffOne.checked));
   localStorage.setItem('onoffTwo', JSON.stringify(onoffTwo.checked));
   localStorage.setItem('select', JSON.stringify(timezone.selectedIndex));
+  const saved = settings.appendChild(savedP);
+  saved.className = "settings-saved";
+  saved.textContent = "Settings saved!";
 }
 
 // Load localStorage and get values
