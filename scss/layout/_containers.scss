@@ -509,6 +509,12 @@
     @include medq("medium") {
       margin-right: 10px;
     }
+    @include medq("xlarge") {
+      margin: 20px 20px 20px 8px;
+    }
+  }
+  @include medq("xlarge") {
+    justify-content: space-around;
   }
 }
 

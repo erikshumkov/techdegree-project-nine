@@ -48,6 +48,9 @@
   @include medq("large") {
     left: 65%;
   }
+  @include medq("xlarge") {
+    left: 75%;
+  }
 }
 .notifications {
   width: 250px;

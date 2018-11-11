@@ -13,7 +13,8 @@
 .bell {
   width: 25px;
   height: 25px;
-  order: 0; }
+  order: 0;
+  padding-top: 1px; }
   .bell:hover {
     cursor: pointer; }
   @media (min-width: 768px) {
@@ -950,6 +951,12 @@ header {
   @media (min-width: 768px) {
     .center #save {
       margin-right: 10px; } }
+  @media (min-width: 1100px) {
+    .center #save {
+      margin: 20px 20px 20px 8px; } }
+  @media (min-width: 1100px) {
+    .center {
+      justify-content: space-around; } }
 
 @media (min-width: 768px) {
   .message-settings {
@@ -1053,6 +1060,10 @@ h4 {
     .success-alert {
       margin-bottom: -20px; } }
 
+.settings-saved {
+  color: lightgreen;
+  margin: 1px 0 -20px 10px; }
+
 /* sidebar nav */
 .navigation--sidebar {
   display: flex;
@@ -1093,6 +1104,9 @@ h4 {
   @media (min-width: 1024px) {
     .box {
       left: 65%; } }
+  @media (min-width: 1100px) {
+    .box {
+      left: 75%; } }
 
 .notifications {
   width: 250px;
@@ -1158,6 +1172,13 @@ ul li .text {
   color: #000;
   top: 3px;
   cursor: pointer; }
+
+.bell svg {
+  transform: perspective(1px) translateZ(0);
+  transform-origin: center center;
+  transition: 0.3s ease-out transform; }
+.bell:hover svg {
+  transform: rotate(15deg); }
 
 .fa-angle-right {
   color: #7377bf;
