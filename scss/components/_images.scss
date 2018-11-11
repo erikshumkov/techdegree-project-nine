@@ -1,7 +1,16 @@
+
 .bell {
   @extend %bell-styling;
   & .number {
     @extend %notification-number;
+  }
+  & svg {
+    transform: perspective(1px) translateZ(0);
+    transform-origin: center center;
+    transition: 0.3s ease-out transform;
+  }
+  &:hover svg {
+    transform: rotate(15deg);
   }
 }
 
