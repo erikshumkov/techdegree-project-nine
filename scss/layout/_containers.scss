@@ -447,6 +447,9 @@
 }
 
 .switch-ios.switch-light > span {
+  &:hover {
+    cursor: pointer;
+  }
   @include medq("medium") {
     width: 90%;
   }

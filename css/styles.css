@@ -890,6 +890,8 @@ header {
   .switch-ios.switch-light input:checked ~ span a {
     border-color: #7377bf; }
 
+.switch-ios.switch-light > span:hover {
+  cursor: pointer; }
 @media (min-width: 768px) {
   .switch-ios.switch-light > span {
     width: 90%; } }
