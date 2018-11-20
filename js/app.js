@@ -232,8 +232,6 @@ let savedP = document.createElement("p");
 let onoffOne = document.querySelector('.switch-one input');
 let onoffTwo = document.querySelector('.switch-two input');
 let timezone = document.querySelector('.settings select');
-const buttonSave = document.getElementById('save');
-const buttonCancel = document.getElementById('cancel');
 
 // Save localStorage with #save button, onclick in index.html
 function saveSettings() {
